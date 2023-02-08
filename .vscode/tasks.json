@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cl.exe build active file",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/EHsc",
+				"/nologo",
+				"/Fe${fileDirname}/bin/test.exe",
+				"/Fo${workspaceFolder}/bin/",
+				"/Fd${fileDirname}/bin/vc140.pdb",
+				"${file}",
+				"${workspaceFolder}/src/functions/*.cpp",
+				"${workspaceFolder}/src/classes/*.cpp"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: cl.exe"
+		}
+	]
+}
